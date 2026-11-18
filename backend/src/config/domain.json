@@ -105,6 +105,35 @@
     "exhibit": "展品编号",
     "prediction": "预计评分",
     "method": "计算依据",
-    "neighbor_count": "参与邻居数"
+    "neighbor_count": "参与邻居数",
+    "pair_no": "配对序号",
+    "reference_a": "A组样本编号",
+    "reference_b": "B组样本编号",
+    "minutes_a": "A组实测时长 min",
+    "minutes_b": "B组实测时长 min",
+    "diff_minutes": "配对时长差 min",
+    "moisture_gap": "湿度差 %",
+    "thickness_gap": "厚度差 mm",
+    "normalized_cost": "容差折算差",
+    "group": "组别",
+    "candidate_count": "容差内候选数",
+    "reason": "未配对原因"
+  },
+  "pair_table": "paired_comparisons",
+  "paired": {
+    "entity": "PairedComparison",
+    "scenario": "两种干燥工艺接到的来料不同，不能直接比较平均时长；在同一受理截点冻结两组试件与湿度/厚度容差，按容差配对后估计配对时长差。",
+    "method_label": "容差内一对一配对、最多配对优先、折算总差最小、配对差值t区间",
+    "headline": "先配成对，再谈时长差。",
+    "principle": "选对只看初始湿度与厚度，实测时长不参与；每件试件最多配对一次，先让合格配对最多，再让容差折算总差最小，同分按样本编号定序。未配成的试件逐条列出原因。",
+    "queue": "pairing:queue",
+    "confidence": 0.95,
+    "min_pairs": 2,
+    "limits": {
+      "tolerance_humidity": 100,
+      "tolerance_thickness": 1000,
+      "group_records": 1000,
+      "candidate_pairs": 60000
+    }
   }
 }

@@ -1,3 +1,5 @@
 -- SQLAlchemy metadata initializes tables idempotently.
--- Domain tables: drying_studies, drying_samples, regression_runs, process_memos.
+-- Domain tables: drying_studies, drying_samples, regression_runs, process_memos, paired_comparisons.
 -- Unique natural keys: source.key; (record.source_id, record.reference).
+-- paired_comparisons 保存受理时冻结的两组试件、湿度/厚度容差、配对名单、未配对原因和区间结果；
+-- 已发布状态与发布时间只写一次，重试从同一份冻结快照恢复。
